@@ -10,7 +10,7 @@ module.exports = (grunt) ->
         sourceMap: true
       compile:
         files:
-          'dist/<%= pkg.name %>.js': ['udefine/*.coffee', 'src/*.coffee']
+          'dist/<%= pkg.name %>.js': ['src/*.coffee']
     uglify:
       options:
         banner: banner
