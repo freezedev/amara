@@ -9,7 +9,8 @@
     "grunt": "0.4.x",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-coffeelint": "*"
+    "grunt-coffeelint": "*",
+    "grunt-mocha": "0.4.x"
   },
   "readmeFilename": "README.md",
   "author": "Johannes Stein",
