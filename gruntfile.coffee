@@ -8,9 +8,17 @@ module.exports = (grunt) ->
     coffee:
       options:
         sourceMap: true
-      compile:
+      app:
         files:
           'dist/<%= pkg.name %>.js': ['src/*.coffee']
+      test:
+        files: [{
+          expand: true,
+          cwd: 'test/',
+          src: ['**/*.coffee'],
+          dest: 'test/',
+          ext: '.js'
+        }]
     uglify:
       options:
         banner: banner
