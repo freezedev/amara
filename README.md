@@ -1,0 +1,4 @@
+amara
+=====
+
+Lightweight AMD loader
