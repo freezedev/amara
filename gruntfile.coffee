@@ -6,9 +6,9 @@ module.exports = (grunt) ->
     date: grunt.template.today('dd-mm-yyyy')
     pkg: grunt.file.readJSON 'package.json'
     coffee:
-      options:
-        sourceMap: true
       app:
+        options:
+          sourceMap: true
         files:
           'dist/<%= pkg.name %>.js': ['src/*.coffee']
       test:
@@ -30,6 +30,11 @@ module.exports = (grunt) ->
       app: ['src/**/*.coffee'],
       test: ['src/**/*.coffee'],
       grunt: ['Gruntfile.coffee']
+    mocha:
+      options:
+        reporter: 'Spec'
+        run: true
+      all: ['test/*.html']
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
