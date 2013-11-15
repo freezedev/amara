@@ -22,17 +22,22 @@
     <script src="../bower_components/mocha/mocha.js"></script>
     <script src="../bower_components/chai/chai.js"></script>
     
-    <script src="../dist/js/amara.js"></script>
+    <script>
+      mocha.setup('bdd');
+      window.expect = chai.expect;
+    </script>
+    <script src="../dist/amara.js"></script>
     
   </head>
 
   <body>
     <div id="mocha"></div>
     
-    <script>
-      mocha.setup('bdd');
-      window.expect = chai.expect;
-    </script>
     <script src="spec/simple.js"></script>
+    <script>
+      if (!window.PHANTOMJS) {
+        mocha.run();
+      }
+    </script>
   </body>
 </html>
